@@ -2,7 +2,7 @@ from abc import ABC, abstractmethod
 import numpy as np
 
 
-class ImageClassificationInterface(ABC):
+class DigitClassificationInterface(ABC):
 
     @abstractmethod
     def predict(self, input_data: np.ndarray) -> int:
@@ -16,4 +16,6 @@ class ImageClassificationInterface(ABC):
         Each implementing class should handle the necessary preprocessing of the input_data to match the
         specific input format requirements of the underlying model.
         """
+
         raise NotImplementedError
+
