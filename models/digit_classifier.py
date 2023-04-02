@@ -15,3 +15,6 @@ class DigitClassifier:
 
     def predict(self, image):
         return self.model.predict(image)
+
+    def train(self):
+        return self.model.train()

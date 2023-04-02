@@ -9,13 +9,16 @@ class DigitClassificationInterface(ABC):
         """
         Predict the digit for the given input_data.
 
-        The input_data should be a 28x28 numpy array representing an image of a handwritten digit.
+        The input_data should be a 28x28X1 numpy array representing an image of a handwritten digit.
 
         The output will be a single integer representing the predicted digit.
 
         Each implementing class should handle the necessary preprocessing of the input_data to match the
         specific input format requirements of the underlying model.
         """
+        pass
 
-        raise NotImplementedError
+    @abstractmethod
+    def train(self, *args, **kwargs):
+        pass
 
