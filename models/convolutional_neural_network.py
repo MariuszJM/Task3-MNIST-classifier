@@ -24,7 +24,7 @@ class ConvolutionalNeuralNetwork(DigitClassificationInterface):
 
         return model
 
-    def predict(self, input_data):
+    def predict(self, input_data: np.ndarray) -> int:
         input_data = input_data.reshape(1, 28, 28, 1)
 
         predictions = self.model(input_data, training=False)
