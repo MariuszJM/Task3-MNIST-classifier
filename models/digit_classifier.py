@@ -1,8 +1,9 @@
 from models import classification_algorithms
+from typing import Literal
 
 
 class DigitClassifier:
-    def __init__(self, algorithm):
+    def __init__(self, algorithm: Literal['cnn', 'rf', 'rand']):
         if algorithm == 'cnn':
             self.model = classification_algorithms.ConvolutionalNeuralNetwork()
         elif algorithm == 'rf':
